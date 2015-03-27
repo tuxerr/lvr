@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2F324F7F1AB29D6200EBC199 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F7E1AB29D6200EBC199 /* main.cpp */; };
-		2F324F8B1AB2A2F000EBC199 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F861AB2A2F000EBC199 /* logger.cpp */; };
 		2F324F8C1AB2A2F000EBC199 /* matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F871AB2A2F000EBC199 /* matrix4.cpp */; };
 		2F324F8D1AB2A2F000EBC199 /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F881AB2A2F000EBC199 /* mutex.cpp */; };
 		2F324F8E1AB2A2F000EBC199 /* vec2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F891AB2A2F000EBC199 /* vec2f.cpp */; };
 		2F324F8F1AB2A2F000EBC199 /* vec3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F8A1AB2A2F000EBC199 /* vec3f.cpp */; };
+		2F324F931AB352F900EBC199 /* vbo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F921AB352F900EBC199 /* vbo.cpp */; };
+		2F324F971AB5713D00EBC199 /* shader_program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F961AB5713D00EBC199 /* shader_program.cpp */; };
+		2F324F991AB5761200EBC199 /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324F981AB5761200EBC199 /* object.cpp */; };
+		2F324FA51AC11AC000EBC199 /* material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324FA31AC11AC000EBC199 /* material.cpp */; };
+		2F324FA91AC1377100EBC199 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F324FA81AC1377100EBC199 /* texture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,11 +39,20 @@
 		2F324F831AB2A2D300EBC199 /* mutex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mutex.hpp; sourceTree = "<group>"; };
 		2F324F841AB2A2D300EBC199 /* vec2f.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vec2f.hpp; sourceTree = "<group>"; };
 		2F324F851AB2A2D300EBC199 /* vec3f.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vec3f.hpp; sourceTree = "<group>"; };
-		2F324F861AB2A2F000EBC199 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
 		2F324F871AB2A2F000EBC199 /* matrix4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrix4.cpp; sourceTree = "<group>"; };
 		2F324F881AB2A2F000EBC199 /* mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mutex.cpp; sourceTree = "<group>"; };
 		2F324F891AB2A2F000EBC199 /* vec2f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vec2f.cpp; sourceTree = "<group>"; };
 		2F324F8A1AB2A2F000EBC199 /* vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vec3f.cpp; sourceTree = "<group>"; };
+		2F324F921AB352F900EBC199 /* vbo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vbo.cpp; sourceTree = "<group>"; };
+		2F324F941AB3530900EBC199 /* vbo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vbo.hpp; sourceTree = "<group>"; };
+		2F324F951AB5713300EBC199 /* shader_program.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader_program.hpp; sourceTree = "<group>"; };
+		2F324F961AB5713D00EBC199 /* shader_program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_program.cpp; sourceTree = "<group>"; };
+		2F324F981AB5761200EBC199 /* object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.cpp; sourceTree = "<group>"; };
+		2F324F9A1AB5761D00EBC199 /* object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = object.hpp; sourceTree = "<group>"; };
+		2F324FA31AC11AC000EBC199 /* material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = material.cpp; path = src/material.cpp; sourceTree = SOURCE_ROOT; };
+		2F324FA61AC11B5C00EBC199 /* material.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = material.hpp; path = inc/material.hpp; sourceTree = SOURCE_ROOT; };
+		2F324FA71AC1376300EBC199 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = texture.hpp; path = inc/texture.hpp; sourceTree = SOURCE_ROOT; };
+		2F324FA81AC1377100EBC199 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = texture.cpp; path = src/texture.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				2F324F7E1AB29D6200EBC199 /* main.cpp */,
-				2F324F861AB2A2F000EBC199 /* logger.cpp */,
 				2F324F871AB2A2F000EBC199 /* matrix4.cpp */,
 				2F324F881AB2A2F000EBC199 /* mutex.cpp */,
 				2F324F891AB2A2F000EBC199 /* vec2f.cpp */,
 				2F324F8A1AB2A2F000EBC199 /* vec3f.cpp */,
+				2F324F921AB352F900EBC199 /* vbo.cpp */,
+				2F324F961AB5713D00EBC199 /* shader_program.cpp */,
+				2F324F981AB5761200EBC199 /* object.cpp */,
+				2F324FA61AC11B5C00EBC199 /* material.hpp */,
+				2F324FA71AC1376300EBC199 /* texture.hpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -91,6 +108,11 @@
 				2F324F831AB2A2D300EBC199 /* mutex.hpp */,
 				2F324F841AB2A2D300EBC199 /* vec2f.hpp */,
 				2F324F851AB2A2D300EBC199 /* vec3f.hpp */,
+				2F324F941AB3530900EBC199 /* vbo.hpp */,
+				2F324F951AB5713300EBC199 /* shader_program.hpp */,
+				2F324F9A1AB5761D00EBC199 /* object.hpp */,
+				2F324FA31AC11AC000EBC199 /* material.cpp */,
+				2F324FA81AC1377100EBC199 /* texture.cpp */,
 			);
 			path = inc;
 			sourceTree = "<group>";
@@ -153,10 +175,14 @@
 			files = (
 				2F324F7F1AB29D6200EBC199 /* main.cpp in Sources */,
 				2F324F8F1AB2A2F000EBC199 /* vec3f.cpp in Sources */,
+				2F324F991AB5761200EBC199 /* object.cpp in Sources */,
+				2F324FA51AC11AC000EBC199 /* material.cpp in Sources */,
 				2F324F8D1AB2A2F000EBC199 /* mutex.cpp in Sources */,
+				2F324F971AB5713D00EBC199 /* shader_program.cpp in Sources */,
+				2F324F931AB352F900EBC199 /* vbo.cpp in Sources */,
 				2F324F8C1AB2A2F000EBC199 /* matrix4.cpp in Sources */,
-				2F324F8B1AB2A2F000EBC199 /* logger.cpp in Sources */,
 				2F324F8E1AB2A2F000EBC199 /* vec2f.cpp in Sources */,
+				2F324FA91AC1377100EBC199 /* texture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
