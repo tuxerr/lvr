@@ -24,6 +24,7 @@ public:
     int element_size();
     GLenum element_type();
     void update(void *data,int size);
+    void updateWithStride(void *data, int size, int elemSize, int offset, int stride);
     void print_contents();
 
 private:

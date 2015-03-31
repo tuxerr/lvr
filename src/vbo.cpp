@@ -115,7 +115,39 @@ void VBO::update(void *data,int size) {
     }
 }
 
-void VBO::update
+void VBO::updateWithStride(void *data, int size, int elemSize, int offset, int stride) {
+    if(!created) {
+        return;
+    }
+    bind();
+    int elemCount = size/elemSize;
+    int vboSizeGoal = elemCount*stride;
+    if(vboSizeGoal>vbo_capacity) {
+        // resizing the VBO
+        vbo_capacity=vboSizeGoal;
+        glBufferData(vbo_type,vbo_capacity,NULL,access_mode);
+        glBufferSubData(vbo_type,0,vboSizeGoal,data);
+        vbo_size=vboSizeGoal;
+    }
+    void *map_vbo=glMapBuffer(vbo_type,GL_WRITE_ONLY);
+    if(map_vbo==NULL) {
+        std::cout<<"Error while tranferring data to VBO"<<std::endl;
+        vbo_size=-1;
+    } else {
+        
+        char *ptrDest = (char*)map_vbo + offset;
+        char *ptrSrc = (char*)data;
+        while(ptrSrc < (char*)data + size) {
+            memcpy(ptrDest, ptrSrc, elemSize);
+            ptrSrc+=elemSize;
+            ptrDest+=stride;
+        }
+        
+        vbo_size=vboSizeGoal;
+    }
+    glUnmapBuffer(vbo_type);
+
+}
 
 void VBO::print_contents() {
     bind();
