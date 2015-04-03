@@ -1,6 +1,31 @@
 #include "object.hpp"
 #include "octree.hpp"
 
+inline int number_of_elements(Object_Attribs a) {
+    switch(a) {
+        case OBJECT_ATTRIB_VERTEX:
+            return 3;
+            break;
+            
+        case OBJECT_ATTRIB_COLOR:
+            return 3;
+            break;
+    
+        case OBJECT_ATTRIB_TEXTURE:
+            return 2;
+            break;
+            
+        case OBJECT_ATTRIB_NORMAL:
+            return 3;
+            break;
+            
+        case OBJECT_NONE:
+            return 0;
+            break;
+    }
+    return -1;
+}
+
 Object::Object(Octree *tree) : 
     has_been_drawn(false),
     ena_colors(true),
@@ -35,39 +60,24 @@ int Object::new_part(Material *mat, int indexCount) {
     return (int)parts.size()-1;
 }
 
-void Object::update_vertices_buffer(void *data,int size,unsigned int part_number,unsigned int lod_number) {
-    
-    if(part_number<parts.size() && lod_number<parts[0].size()) {
-
-
-        if(!parts[part_number][lod_number].vbo.iscreated())
-            parts[part_number][lod_number].vbo.create();
-        parts[part_number][lod_number].vbo.update(data,size);
-
-        if(lod_number==0) {
-            float currentmax=-1;
-            float *ptr=(float*)data;
-
-            for(int i=0;i<((size/sizeof(Vec3<float>))-2);i++) {
-
-                Vec3<float> point(ptr[3*i],ptr[3*i+1],ptr[3*i+2]);
-
-                if(point.norm()>currentmax) {
-                    currentmax=point.norm();
-                }
-            }
-
-            parts[part_number][0].bounding_sphere_weight=size/12;
-            parts[part_number][0].bounding_sphere_size=currentmax;
+void Object::update_vertex_buffer(void *data,int size,Object_Attribs attrib) {
+    int offset = 0, stride = 0;
+    bool found = false;
+    for(Object_Attribs a : attribs) {
+        int sizeIncr = number_of_elements(a)*sizeof(float);
+        stride += sizeIncr;
+        if(!found) {
+            offset += sizeIncr;
         }
-
+        
+        if(a==attrib) {
+            found = true;
+        }
     }
-    calculate_bounding_sphere();
-
-    if(lod_number==0 && tree!=NULL) {
-        tree->delete_object(this);
-        tree->add_object(this);
-    }
+    
+    
+    
+    
 }
 
 void Object::calculate_bounding_sphere() {

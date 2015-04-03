@@ -2,9 +2,9 @@
 #define DEF_VBO
 
 #include <iostream>
-#include <GL/glew.h>
+//#include <GL/glew.h>
 #define GLFW_INCLUDE_GLCOREARB
-#include <GLFW/glfw3.h>
+//#include <GLFW/glfw3.h>
 #include <string.h>
 #include "shader_program.hpp"
 #include "logger.hpp"

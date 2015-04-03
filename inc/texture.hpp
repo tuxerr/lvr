@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <vector>
-#include <GL/glew.h>
+//#include <GL/glew.h>
 #define GLFW_INCLUDE_GLCOREARB
 #include <GLFW/glfw3.h>
 #include "SOIL.h"
-#include "constants.hpp"
+//#include "constants.hpp"
 #include "logger.hpp"
 
 typedef enum Texture_Types {

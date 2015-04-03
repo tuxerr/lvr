@@ -5,9 +5,9 @@
 #include <map>
 #include <string>
 #include <list>
-#include <GL/glew.h>
+//#include <GL/glew.h>
 #define GLFW_INCLUDE_GLCOREARB
-#include <GLFW/glfw3.h>
+//#include <GLFW/glfw3.h>
 #include "vbo.hpp"
 #include "matrix4.hpp"
 #include "utils.hpp"
@@ -22,13 +22,7 @@ enum Object_Attribs {
     OBJECT_NONE
 };
 
-#define NUMBER_OF_ELEMENTS_OF_ATTRIB(a) (
-(a) == OBJECT_ATTRIB_VERTEX ? 3 : \
-(a) == OBJECT_ATTRIB_COLOR ? 3 : \
-(a) == OBJECT_ATTRIB_TEXTURE ? 2 : \
-(a) == OBJECT_ATTRIB_NORMAL ? 3 : \
-0 ) \
-
+inline int number_of_elements(Object_Attribs a);
 
 class Octree;
 
