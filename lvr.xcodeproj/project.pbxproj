@@ -62,6 +62,7 @@
 		2F76DDB31ACE43A000A5BA75 /* uniformblock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uniformblock.cpp; sourceTree = "<group>"; };
 		2F76DDB61ACE443F00A5BA75 /* uniform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = uniform.hpp; sourceTree = "<group>"; };
 		2F76DDB71ACE443F00A5BA75 /* uniformblock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = uniformblock.hpp; sourceTree = "<group>"; };
+		2F76DDB81ACE479000A5BA75 /* constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +130,7 @@
 				2F324F9A1AB5761D00EBC199 /* object.hpp */,
 				2F324FA31AC11AC000EBC199 /* material.cpp */,
 				2F324FA81AC1377100EBC199 /* texture.cpp */,
+				2F76DDB81ACE479000A5BA75 /* constants.hpp */,
 			);
 			path = inc;
 			sourceTree = "<group>";
